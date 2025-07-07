@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "gianttntmod:block/giant_tnt_bottom",
+    "east": "gianttntmod:block/giant_tnt_side_unstable",
+    "north": "gianttntmod:block/giant_tnt_side_unstable",
+    "south": "gianttntmod:block/giant_tnt_side_unstable",
+    "up": "gianttntmod:block/giant_tnt_top_unstable",
+    "west": "gianttntmod:block/giant_tnt_side_unstable"
+  }
+} 

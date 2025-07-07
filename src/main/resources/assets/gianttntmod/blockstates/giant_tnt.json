@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "unstable=false": {
+      "model": "gianttntmod:block/giant_tnt"
+    },
+    "unstable=true": {
+      "model": "gianttntmod:block/giant_tnt_unstable"
+    }
+  }
+} 
