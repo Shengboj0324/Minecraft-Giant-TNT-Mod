@@ -1,0 +1,15 @@
+{
+  "item.firearmsmod.assault_rifle": "Assault Rifle",
+  "item.firearmsmod.sniper_rifle": "Sniper Rifle",
+  "item.firearmsmod.pistol": "Pistol",
+  "item.firearmsmod.shotgun": "Shotgun",
+  "item.firearmsmod.rifle_ammo": "Rifle Ammunition",
+  "item.firearmsmod.pistol_ammo": "Pistol Ammunition",
+  "item.firearmsmod.shotgun_shells": "Shotgun Shells",
+  "item.firearmsmod.sniper_ammo": "Sniper Ammunition",
+  "item.firearmsmod.gun_barrel": "Gun Barrel",
+  "item.firearmsmod.gun_stock": "Gun Stock",
+  "item.firearmsmod.trigger_mechanism": "Trigger Mechanism",
+  "item.firearmsmod.gunpowder_enhanced": "Enhanced Gunpowder",
+  "itemGroup.firearmsmod": "Firearms Mod"
+} 

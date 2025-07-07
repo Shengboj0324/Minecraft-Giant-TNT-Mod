@@ -1,39 +1,136 @@
-# Minecraft Giant TNT Mod
+# Minecraft Mods Collection
 
-A Minecraft Forge mod that adds an extremely powerful TNT variant that creates massive explosions!
+A comprehensive collection of three advanced Minecraft Forge mods that add powerful weapons, massive explosions, and intelligent AI to your Minecraft experience!
 
-## Features
+## 🧨 Giant TNT Mod
 
-- **Giant TNT Block**: A new TNT variant that's much more powerful than regular TNT
-- **Flying Mechanics**: When ignited, the Giant TNT launches high into the air before falling back down
-- **Massive Explosions**: Creates explosions with a 650-block diameter (325-block radius)
-- **Dramatic Effects**: Enhanced particle effects, sounds, and visual feedback
-- **Balanced Crafting**: Requires 8 TNT blocks and a Nether Star to craft
+**The most explosive mod you'll ever use!**
 
-## How to Use
+### Features
+- **Massive Explosions**: Creates 650-block diameter craters (325-block radius)
+- **Flying Mechanics**: TNT launches high into the air before exploding
+- **Dramatic Effects**: Enhanced particles, sounds, and visual feedback
+- **Smart Physics**: Realistic trajectory with air time and ground impact
+- **Balanced Crafting**: Requires 8 TNT blocks and a Nether Star
 
-1. Craft Giant TNT using 8 TNT blocks arranged around a Nether Star
-2. Place the Giant TNT block where you want the explosion
-3. Ignite it with Flint and Steel, Fire Charge, Redstone signal, or by hitting it with a flaming arrow
-4. Watch as it launches into the air and creates a devastating explosion!
+### Usage
+1. Craft using 8 TNT + 1 Nether Star
+2. Place and ignite with flint & steel, redstone, or fire charges
+3. Watch it soar into the sky and create devastating destruction!
 
-## Technical Details
+## 🔫 Firearms Mod
+
+**Realistic modern weapons for Minecraft combat!**
+
+### Features
+- **4 Weapon Types**: Assault Rifle, Sniper Rifle, Pistol, Shotgun
+- **Realistic Combat**: Each weapon has unique damage, accuracy, range, and recoil
+- **Ammunition System**: Weapon-specific ammo requirements
+- **Advanced Mechanics**: 
+  - Muzzle flash particles
+  - Bullet trail effects  
+  - Realistic ballistics with gravity
+  - Different firing patterns (shotgun spreads, sniper precision)
+- **Crafting Components**: Gun barrels, stocks, triggers, enhanced gunpowder
+
+### Weapon Stats
+- **Pistol**: Fast, low damage, good for close combat
+- **Assault Rifle**: Balanced damage and rate of fire
+- **Sniper Rifle**: High damage, perfect accuracy, slow reload
+- **Shotgun**: Devastating close-range spread damage
+
+## 🧠 Villager AI Mod
+
+**Revolutionary AI that makes villagers truly intelligent!**
+
+### Features
+- **English Communication**: 200+ unique phrases and responses
+- **Advanced Emotions**: 10 different emotional states (Happy, Angry, Love, Trust, Fear, etc.)
+- **Relationship System**: Villagers remember your actions and develop lasting relationships
+- **Dynamic Behaviors**:
+  - **Follow**: High-trust villagers will follow you around
+  - **Obey**: Medium-trust villagers will respond to commands  
+  - **Attack**: Low-trust villagers become hostile
+  - **Ignore**: Neutral villagers maintain distance
+- **Persistent Memory**: Relationships saved between game sessions
+- **Conversation Depth**: Deeper conversations unlock as relationships develop
+- **Context-Aware Responses**: Messages change based on situation and history
+
+### How It Works
+- **Normal Interaction**: Right-click villagers for basic greetings
+- **Deep Communication**: Sneak + right-click for extended conversations
+- **Relationship Building**: 
+  - Positive actions increase trust (trading, helping, gifts)
+  - Negative actions decrease trust (attacking, ignoring, stealing)
+  - Time slowly decays relationships toward neutral
+- **Emotional Responses**: Villagers react with appropriate emotions and behaviors
+
+## 🛠️ Multi-Project Structure
+
+This repository uses Gradle multi-project setup:
+
+```
+minecraft-mods-collection/
+├── giant-tnt-mod/          # Explosive TNT mod
+├── firearms-mod/           # Modern weapons mod  
+├── villager-ai-mod/        # Intelligent villager AI
+├── build.gradle            # Root build configuration
+└── settings.gradle         # Multi-project setup
+```
+
+## 🚀 Building & Installation
+
+### Prerequisites
+- Java 17+
+- Minecraft Forge 1.19.2-43.3.0+
+
+### Build All Mods
+```bash
+./gradlew build
+```
+
+### Build Individual Mods
+```bash
+./gradlew :giant-tnt-mod:build
+./gradlew :firearms-mod:build  
+./gradlew :villager-ai-mod:build
+```
+
+### Installation
+1. Install Minecraft Forge 1.19.2
+2. Built JAR files will be in each mod's `build/libs/` folder
+3. Place desired JAR files in your `mods` folder
+4. Launch Minecraft with Forge profile
+
+## ⚠️ Important Warnings
+
+- **Giant TNT**: Creates MASSIVE explosions that can destroy entire landscapes!
+- **Firearms**: Adds lethal weapons - use responsibly in multiplayer
+- **Villager AI**: Villagers will remember everything - treat them well!
+
+## 🎮 Gameplay Tips
+
+### Giant TNT
+- Use in creative mode or backup your world first
+- Creates spectacular crater lakes and mining operations
+- Perfect for large-scale terraforming projects
+
+### Firearms  
+- Different ammo types for different weapons
+- Weapons have durability and need maintenance
+- Realistic recoil affects accuracy
+
+### Villager AI
+- Start conversations by sneaking + right-clicking
+- Give gifts to build relationships faster
+- Hurt villagers and they'll hold grudges forever
+- High-trust villagers unlock special dialogue and behaviors
+
+## 🔧 Technical Details
 
 - **Minecraft Version**: 1.19.2
 - **Mod Loader**: Minecraft Forge 43.3.0+
 - **Java Version**: 17+
+- **License**: MIT
 
-## Building
-
-1. Make sure you have Java 17 installed
-2. Run `./gradlew build` (Linux/Mac) or `gradlew.bat build` (Windows)
-3. The built mod JAR will be in `build/libs/`
-
-## Installation
-
-1. Install Minecraft Forge 1.19.2
-2. Download the mod JAR file
-3. Place it in your `mods` folder
-4. Launch Minecraft with the Forge profile
-
-⚠️ **Warning**: This mod creates extremely large explosions that can destroy vast areas of your world. Use with caution!
+Each mod is fully independent and can be used separately or together for the ultimate Minecraft experience!

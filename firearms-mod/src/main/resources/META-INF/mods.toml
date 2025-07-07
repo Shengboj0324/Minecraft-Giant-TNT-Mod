@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT"
+
+[[mods]]
+modId="firearmsmod"
+version="${file.jarVersion}"
+displayName="Firearms Mod"
+logoFile="firearms_logo.png"
+credits="Thanks to the Minecraft Forge team for making modding possible!"
+authors="YourName"
+description='''
+Firearms Mod adds realistic weapons to Minecraft!
+Features multiple weapon types including rifles, pistols, and shotguns,
+each with unique stats, ammunition requirements, and combat mechanics.
+'''
+
+[[dependencies.firearmsmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.firearmsmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.20)"
+    ordering="NONE"
+    side="BOTH" 

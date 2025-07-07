@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT"
+
+[[mods]]
+modId="villageraimod"
+version="${file.jarVersion}"
+displayName="Villager AI Mod"
+logoFile="villager_ai_logo.png"
+credits="Thanks to the Minecraft Forge team for making modding possible!"
+authors="YourName"
+description='''
+Villager AI Mod revolutionizes villager interactions!
+Features advanced AI with emotions, English communication,
+relationship tracking, and complex behavioral responses.
+Villagers will remember you, react to your actions,
+and develop unique relationships based on your interactions.
+'''
+
+[[dependencies.villageraimod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.villageraimod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.20)"
+    ordering="NONE"
+    side="BOTH" 
