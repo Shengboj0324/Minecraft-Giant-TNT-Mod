@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT"
+
+[[mods]]
+modId="dimensionsmod"
+version="${file.jarVersion}"
+displayName="Dimensions Mod"
+logoFile="dimensions_logo.png"
+credits="Thanks to the Minecraft Forge team for making modding possible!"
+authors="YourName"
+description='''
+Dimensions Mod adds incredible new worlds to explore!
+Features the heavenly Aether dimension with floating islands
+and the mysterious Middle dimension that serves as a transit
+realm for long-distance teleportation. Build portals with
+glowing stones or bedrock to access these amazing realms!
+'''
+
+[[dependencies.dimensionsmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.dimensionsmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.20)"
+    ordering="NONE"
+    side="BOTH" 

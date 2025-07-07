@@ -1,0 +1,86 @@
+{
+  "temperature": 0.2,
+  "humidity": 0.1,
+  "precipitation": "none",
+  "downfall": 0.0,
+  "effects": {
+    "sky_color": 1842204,
+    "water_fog_color": 329011,
+    "fog_color": 1842204,
+    "water_color": 4159204,
+    "grass_color": 4996700,
+    "foliage_color": 4996700,
+    "mood_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.mood",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "music": {
+      "sound": "minecraft:music.nether.nether_wastes",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.0111
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:enderman",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:phantom",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "creature": [],
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "weight": 10,
+        "minCount": 8,
+        "maxCount": 8
+      }
+    ],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": []
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [
+      "dimensionsmod:middle_platforms"
+    ],
+    [
+      "dimensionsmod:middle_void_patches"
+    ],
+    [],
+    [
+      "dimensionsmod:middle_spires"
+    ],
+    [
+      "dimensionsmod:middle_crystals"
+    ],
+    [],
+    [
+      "dimensionsmod:middle_portals",
+      "dimensionsmod:middle_ore_generation"
+    ]
+  ]
+} 

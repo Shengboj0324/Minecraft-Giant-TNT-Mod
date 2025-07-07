@@ -1,0 +1,91 @@
+{
+  "temperature": 0.6,
+  "humidity": 0.8,
+  "precipitation": "rain",
+  "downfall": 0.8,
+  "effects": {
+    "sky_color": 11854534,
+    "water_fog_color": 4159204,
+    "fog_color": 11854534,
+    "water_color": 7906559,
+    "grass_color": 6533171,
+    "foliage_color": 6533171,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.forest",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop"
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:phantom",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:parrot",
+        "weight": 15,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:ocelot",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "weight": 10,
+        "minCount": 8,
+        "maxCount": 8
+      }
+    ],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": []
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [
+      "dimensionsmod:aether_island_base"
+    ],
+    [
+      "dimensionsmod:aether_cloud_patches"
+    ],
+    [],
+    [
+      "dimensionsmod:aether_dense_trees"
+    ],
+    [
+      "dimensionsmod:aether_ferns"
+    ],
+    [
+      "dimensionsmod:aether_flowers"
+    ],
+    [
+      "dimensionsmod:aether_crystals",
+      "dimensionsmod:aether_ore_generation"
+    ]
+  ]
+} 

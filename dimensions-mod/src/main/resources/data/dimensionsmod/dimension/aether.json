@@ -1,0 +1,36 @@
+{
+  "type": "dimensionsmod:aether",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "dimensionsmod:aether",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "dimensionsmod:aether_highlands",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "dimensionsmod:aether_forest",
+          "parameters": {
+            "temperature": 0.5,
+            "humidity": 0.5,
+            "continentalness": 0.2,
+            "erosion": 0.1,
+            "weirdness": 0.3,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        }
+      ]
+    }
+  }
+} 

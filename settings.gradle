@@ -3,8 +3,10 @@ rootProject.name = 'minecraft-mods-collection'
 include 'giant-tnt-mod'
 include 'firearms-mod'
 include 'villager-ai-mod'
+include 'dimensions-mod'
 
 // Configure project directories
 project(':giant-tnt-mod').projectDir = file('giant-tnt-mod')
 project(':firearms-mod').projectDir = file('firearms-mod')
-project(':villager-ai-mod').projectDir = file('villager-ai-mod') 
+project(':villager-ai-mod').projectDir = file('villager-ai-mod')
+project(':dimensions-mod').projectDir = file('dimensions-mod') 

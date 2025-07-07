@@ -1,0 +1,11 @@
+{
+  "block.dimensionsmod.glowing_stone": "Glowing Stone",
+  "block.dimensionsmod.aether_portal": "Aether Portal",
+  "block.dimensionsmod.bedrock_portal": "Bedrock Portal",
+  "item.dimensionsmod.glowing_stone": "Glowing Stone",
+  "itemGroup.dimensionsmod": "Dimensions Mod",
+  "dimension.dimensionsmod.aether": "The Aether",
+  "dimension.dimensionsmod.middle": "Middle Dimension",
+  "biome.dimensionsmod.aether_highlands": "Aether Highlands",
+  "biome.dimensionsmod.middle_void": "Void Transit"
+} 

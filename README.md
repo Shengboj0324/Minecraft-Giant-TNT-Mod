@@ -65,6 +65,35 @@ A comprehensive collection of three advanced Minecraft Forge mods that add power
   - Time slowly decays relationships toward neutral
 - **Emotional Responses**: Villagers react with appropriate emotions and behaviors
 
+## 🌌 Dimensions Mod
+
+**Explore incredible new worlds and mysterious realms!**
+
+### Features
+- **The Aether Dimension**: Heavenly realm inspired by the classic Aether mod
+  - Floating islands and cloud-level exploration
+  - Bright, peaceful environment with unique opportunities
+  - Access via Glowing Stone portals (4x5 minimum frame)
+  
+- **The Middle Dimension**: Mysterious transit realm
+  - Dark, liminal space that serves as a teleportation hub
+  - Automatically accessed during long-distance overworld teleports
+  - Built with Bedrock portals for direct access
+  
+- **Advanced Teleportation System**:
+  - Long-distance teleports (10+ blocks) automatically route through Middle Dimension
+  - 5-second transit time creates suspenseful journey
+  - Seamless integration with vanilla teleportation mechanics
+
+### Portal Building
+- **Aether Portal**: Build 4x5+ frame with Glowing Stone, ignite with Flint & Steel
+- **Bedrock Portal**: Build 4x5+ frame with Bedrock blocks, ignite with Flint & Steel
+- **Glowing Stone Crafting**: 8 Stone + 8 Glowstone = 8 Glowing Stone
+
+### Dimension Features
+- **Aether**: Bright, elevated world perfect for sky bases and exploration
+- **Middle**: Dark transit realm with unique aesthetics and temporary stays
+
 ## 🛠️ Multi-Project Structure
 
 This repository uses Gradle multi-project setup:
@@ -74,6 +103,7 @@ minecraft-mods-collection/
 ├── giant-tnt-mod/          # Explosive TNT mod
 ├── firearms-mod/           # Modern weapons mod  
 ├── villager-ai-mod/        # Intelligent villager AI
+├── dimensions-mod/         # Custom dimensions and portals
 ├── build.gradle            # Root build configuration
 └── settings.gradle         # Multi-project setup
 ```
@@ -94,6 +124,7 @@ minecraft-mods-collection/
 ./gradlew :giant-tnt-mod:build
 ./gradlew :firearms-mod:build  
 ./gradlew :villager-ai-mod:build
+./gradlew :dimensions-mod:build
 ```
 
 ### Installation
@@ -107,6 +138,7 @@ minecraft-mods-collection/
 - **Giant TNT**: Creates MASSIVE explosions that can destroy entire landscapes!
 - **Firearms**: Adds lethal weapons - use responsibly in multiplayer
 - **Villager AI**: Villagers will remember everything - treat them well!
+- **Dimensions**: Long-distance teleports automatically route through Middle dimension!
 
 ## 🎮 Gameplay Tips
 
@@ -126,6 +158,13 @@ minecraft-mods-collection/
 - Hurt villagers and they'll hold grudges forever
 - High-trust villagers unlock special dialogue and behaviors
 
+### Dimensions
+- Craft Glowing Stone with 8 Stone + 8 Glowstone for Aether portals
+- Build 4x5 minimum portal frames (can be larger)
+- Use Bedrock for Middle dimension portals (creative mode recommended)
+- Long ender pearl throws automatically use Middle dimension transit
+- Aether is perfect for building sky cities and cloud bases
+
 ## 🔧 Technical Details
 
 - **Minecraft Version**: 1.19.2
@@ -133,4 +172,4 @@ minecraft-mods-collection/
 - **Java Version**: 17+
 - **License**: MIT
 
-Each mod is fully independent and can be used separately or together for the ultimate Minecraft experience!
+All four mods are fully independent and can be used separately or together for the ultimate enhanced Minecraft experience!
