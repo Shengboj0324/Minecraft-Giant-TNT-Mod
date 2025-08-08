@@ -173,3 +173,32 @@ minecraft-mods-collection/
 - **License**: MIT
 
 All four mods are fully independent and can be used separately or together for the ultimate enhanced Minecraft experience!
+
+## 👨‍💻 Author
+
+**Shengbo Jiang**  
+Minecraft modding enthusiast and software developer
+
+### 🔗 Links
+- **GitHub**: [shengbojiang](https://github.com/shengbojiang)
+- **Project Repository**: [Minecraft-Giant-TNT-Mod](https://github.com/shengbojiang/Minecraft-Giant-TNT-Mod)
+- **Issues & Support**: [GitHub Issues](https://github.com/shengbojiang/minecraft-giant-tnt-mod/issues)
+
+### 💡 About the Developer
+Passionate about creating immersive Minecraft experiences through advanced modding techniques. This collection represents months of development focused on:
+- **Performance optimization** for lag-free massive explosions
+- **Immersive experiences** with atmospheric effects and storytelling
+- **Technical excellence** with enterprise-grade crash safety and configuration
+- **International accessibility** with multi-language support
+
+### 🤝 Contributing
+Contributions, bug reports, and feature requests are welcome! Feel free to:
+- Fork the repository
+- Submit pull requests
+- Report issues
+- Suggest improvements
+- Create resource packs
+
+---
+
+**🎮 Happy Mining and Exploding!** 💥

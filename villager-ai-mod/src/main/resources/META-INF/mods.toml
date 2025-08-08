@@ -8,7 +8,7 @@ version="${file.jarVersion}"
 displayName="Villager AI Mod"
 logoFile="villager_ai_logo.png"
 credits="Thanks to the Minecraft Forge team for making modding possible!"
-authors="YourName"
+authors="Shengbo Jiang"
 description='''
 Villager AI Mod revolutionizes villager interactions!
 Features advanced AI with emotions, English communication,

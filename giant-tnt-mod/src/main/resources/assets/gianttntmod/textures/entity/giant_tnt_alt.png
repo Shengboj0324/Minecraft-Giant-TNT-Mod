@@ -1,0 +1,12 @@
+# Alternative Giant TNT Texture (32x32)
+# This is a placeholder file - resource pack creators can replace this
+# with their own 32x32 Giant TNT entity texture
+#
+# To use this texture:
+# 1. Create a resource pack
+# 2. Replace this file with your custom texture
+# 3. The mod will automatically use the alternative texture if present
+#
+# Recommended: Purple/dark theme for mystical giant TNT variant
+
+PNG_PLACEHOLDER_FILE

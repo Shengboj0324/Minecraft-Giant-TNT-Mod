@@ -1,0 +1,31 @@
+{
+  "block.dimensionsmod.glowing_stone": "发光石",
+  "block.dimensionsmod.aether_portal": "以太传送门",
+  "block.dimensionsmod.bedrock_portal": "基岩传送门",
+  "item.dimensionsmod.glowing_stone": "发光石",
+  "itemGroup.dimensionsmod": "维度模组",
+  "dimension.dimensionsmod.aether": "以太",
+  "dimension.dimensionsmod.middle": "中间维度",
+  "biome.dimensionsmod.aether_highlands": "以太高地",
+  "biome.dimensionsmod.middle_void": "虚空过境",
+  
+  "_comment": "=== 神秘传送信息 ===",
+  "dimensionsmod.teleport.rift_opening": "⚡ 维度裂缝撕裂了空间...",
+  "dimensionsmod.teleport.dimensional_rift": "🌌 现实破碎，你穿透了世界之间的面纱！",
+  "dimensionsmod.teleport.entering_middle": "✨ 你漂浮在空灵的中间维度中...",
+  "dimensionsmod.teleport.preparing_exit": "🔮 维度门户准备释放你...",
+  "dimensionsmod.teleport.transit_progress": "⏳ 在虚空中漂浮... %d 秒后到达",
+  "dimensionsmod.teleport.journey_complete": "🎊 你的神秘之旅完成了！",
+  
+  "_comment2": "=== 维度描述 ===",
+  "dimensionsmod.dimension.aether.description": "浮空岛屿和永恒天空的领域",
+  "dimensionsmod.dimension.middle.description": "世界之间的神秘过境维度",
+  
+  "_comment3": "=== 传送门信息 ===",
+  "dimensionsmod.portal.aether.activated": "发光石传送门散发着天体能量",
+  "dimensionsmod.portal.middle.activated": "基岩传送门与维度力量共鸣",
+  
+  "_comment4": "=== 方块提示 ===",
+  "dimensionsmod.glowing_stone.tooltip": "散发着超世界的光芒",
+  "dimensionsmod.portal.tooltip": "踏入以穿越维度"
+}

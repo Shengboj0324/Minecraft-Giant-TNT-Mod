@@ -8,7 +8,7 @@ version="${file.jarVersion}"
 displayName="Firearms Mod"
 logoFile="firearms_logo.png"
 credits="Thanks to the Minecraft Forge team for making modding possible!"
-authors="YourName"
+authors="Shengbo Jiang"
 description='''
 Firearms Mod adds realistic weapons to Minecraft!
 Features multiple weapon types including rifles, pistols, and shotguns,

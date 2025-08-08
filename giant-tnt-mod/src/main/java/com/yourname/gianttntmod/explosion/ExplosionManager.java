@@ -87,11 +87,65 @@ public class ExplosionManager {
     }
     
     public static void queueMassiveExplosion(ServerLevel level, Entity source, double x, double y, double z) {
+        // Validate and clamp configuration values for safety
+        if (!validateExplosionConfig()) {
+            return; // Skip explosion if config is unsafe
+        }
+        
         // Play initial explosion sound
         level.playSound(null, new BlockPos(x, y, z), SoundEvents.GENERIC_EXPLODE, 
             SoundSource.BLOCKS, 16.0F, 0.7F);
             
         queuedExplosions.add(new PhasedExplosion(level, source, x, y, z));
+    }
+    
+    /**
+     * Validates explosion configuration to prevent crashes and performance issues.
+     * Automatically clamps dangerous values and logs warnings.
+     */
+    private static boolean validateExplosionConfig() {
+        boolean configValid = true;
+        
+        // Prevent division by zero in explosion phases
+        if (GiantTNTConfig.explosionPhases <= 0) {
+            GiantTNTConfig.explosionPhases = 1;
+            logConfigWarning("explosionPhases was 0 or negative, clamped to 1");
+            configValid = false;
+        }
+        
+        // Prevent massive explosion radius that could crash server
+        if (GiantTNTConfig.explosionRadius > 1000.0) {
+            GiantTNTConfig.explosionRadius = 1000.0;
+            logConfigWarning("explosionRadius exceeded 1000 blocks, clamped to 1000");
+            configValid = false;
+        }
+        
+        // Prevent too many sub-explosions
+        if (GiantTNTConfig.subExplosionCount > 200) {
+            GiantTNTConfig.subExplosionCount = 200;
+            logConfigWarning("subExplosionCount exceeded 200, clamped to 200");
+            configValid = false;
+        }
+        
+        // Prevent particle spam
+        if (GiantTNTConfig.particleCount > 5000) {
+            GiantTNTConfig.particleCount = 5000;
+            logConfigWarning("particleCount exceeded 5000, clamped to 5000");
+            configValid = false;
+        }
+        
+        // Validate phases don't exceed sub-explosion count
+        if (GiantTNTConfig.explosionPhases > GiantTNTConfig.subExplosionCount) {
+            GiantTNTConfig.explosionPhases = GiantTNTConfig.subExplosionCount;
+            logConfigWarning("explosionPhases exceeded subExplosionCount, adjusted to match");
+            configValid = false;
+        }
+        
+        return configValid;
+    }
+    
+    private static void logConfigWarning(String issue) {
+        System.err.println("[Giant TNT Mod] WARNING: Configuration issue detected - " + issue);
     }
     
     @SubscribeEvent

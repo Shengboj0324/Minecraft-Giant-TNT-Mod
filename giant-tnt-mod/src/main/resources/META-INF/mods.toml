@@ -1,11 +1,11 @@
 # Giant TNT Mod - Adds massive explosive TNT for Minecraft
-# Author: ModDeveloper
+# Author: Shengbo Jiang
 # License: MIT License
 
 modLoader="javafml"
 loaderVersion="[43,)"
 license="MIT License - Free to use, modify, and distribute"
-issueTrackerURL="https://github.com/yourname/minecraft-giant-tnt-mod/issues"
+issueTrackerURL="https://github.com/shengbojiang/minecraft-giant-tnt-mod/issues"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
@@ -19,13 +19,13 @@ displayName="Giant TNT Mod" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="https://github.com/yourname/minecraft-giant-tnt-mod"
+displayURL="https://github.com/shengbojiang/minecraft-giant-tnt-mod"
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile="gianttnt_logo.png"
 # A text field displayed in the mod UI
 credits="Thanks to the Minecraft Forge team for making modding possible!"
 # A text field displayed in the mod UI
-authors="ModDeveloper"
+authors="Shengbo Jiang"
 # The description text for the mod (multi line text here _is_ allowed)
 description='''
 Giant TNT Mod adds massive explosive TNT for epic destruction in Minecraft!
