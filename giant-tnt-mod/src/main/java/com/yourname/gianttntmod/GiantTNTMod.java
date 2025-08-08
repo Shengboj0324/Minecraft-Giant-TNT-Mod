@@ -1,11 +1,14 @@
 package com.yourname.gianttntmod;
 
+import com.yourname.gianttntmod.config.GiantTNTConfig;
 import com.yourname.gianttntmod.init.ModBlocks;
 import com.yourname.gianttntmod.init.ModEntities;
 import com.yourname.gianttntmod.init.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -18,6 +21,9 @@ public class GiantTNTMod {
 
     public GiantTNTMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        
+        // Register configuration
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GiantTNTConfig.SPEC);
         
         // Register deferred registers
         ModBlocks.register(modEventBus);
