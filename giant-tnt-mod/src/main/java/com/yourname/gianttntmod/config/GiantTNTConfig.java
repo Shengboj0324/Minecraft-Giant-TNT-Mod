@@ -4,10 +4,13 @@ import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod.EventBusSubscriber(modid = "gianttntmod", bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GiantTNTConfig {
     
+    private static final Logger LOGGER = LogManager.getLogger();
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     
     public static final ForgeConfigSpec.DoubleValue EXPLOSION_RADIUS;
@@ -70,6 +73,7 @@ public class GiantTNTConfig {
     
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
+        // Load raw config values
         explosionRadius = EXPLOSION_RADIUS.get();
         subExplosionCount = SUB_EXPLOSION_COUNT.get();
         explosionPhases = EXPLOSION_PHASES.get();
@@ -78,5 +82,55 @@ public class GiantTNTConfig {
         breaksBlocks = BREAKS_BLOCKS.get();
         enablePerformanceMode = ENABLE_PERFORMANCE_MODE.get();
         maxParticlesPerTick = MAX_PARTICLES_PER_TICK.get();
+        
+        // Validate config values and provide safety warnings
+        validateAndLogConfigValues();
+    }
+    
+    /**
+     * Validates config values on load/reload and provides safety warnings.
+     * This prevents crashes from divide-by-zero and extreme values.
+     */
+    private static void validateAndLogConfigValues() {
+        boolean hasIssues = false;
+        
+        // Check for divide-by-zero scenarios
+        if (explosionPhases <= 0) {
+            LOGGER.error("CRITICAL: explosionPhases is {} (must be > 0). This will cause crashes! Please fix config immediately.", explosionPhases);
+            hasIssues = true;
+        }
+        
+        if (subExplosionCount <= 0) {
+            LOGGER.error("CRITICAL: subExplosionCount is {} (must be > 0). This will cause issues! Please fix config immediately.", subExplosionCount);
+            hasIssues = true;
+        }
+        
+        // Check for performance-impacting values
+        if (explosionRadius > 1000) {
+            LOGGER.warn("WARNING: explosionRadius is {} blocks. Values > 1000 may cause severe performance issues or crashes.", explosionRadius);
+            hasIssues = true;
+        }
+        
+        if (subExplosionCount > 200) {
+            LOGGER.warn("WARNING: subExplosionCount is {}. Values > 200 may cause performance issues.", subExplosionCount);
+            hasIssues = true;
+        }
+        
+        if (particleCount > 5000) {
+            LOGGER.warn("WARNING: particleCount is {}. Values > 5000 may flood network and cause lag.", particleCount);
+            hasIssues = true;
+        }
+        
+        // Check for logical inconsistencies
+        if (explosionPhases > subExplosionCount) {
+            LOGGER.warn("WARNING: explosionPhases ({}) > subExplosionCount ({}). This will create empty phases.", explosionPhases, subExplosionCount);
+            hasIssues = true;
+        }
+        
+        if (hasIssues) {
+            LOGGER.warn("Config validation found issues. Please review config/gianttntmod-common.toml and restart the server for optimal performance.");
+        } else {
+            LOGGER.info("Giant TNT config loaded successfully. Radius: {} blocks, Phases: {}, Performance Mode: {}", explosionRadius, explosionPhases, enablePerformanceMode);
+        }
     }
 }

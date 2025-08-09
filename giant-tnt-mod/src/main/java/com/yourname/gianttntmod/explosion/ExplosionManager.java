@@ -11,6 +11,8 @@ import net.minecraft.world.level.Explosion;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,6 +22,7 @@ import java.util.Random;
 @Mod.EventBusSubscriber(modid = "gianttntmod")
 public class ExplosionManager {
     
+    private static final Logger LOGGER = LogManager.getLogger();
     private static final List<PhasedExplosion> queuedExplosions = new ArrayList<>();
     private static final Random random = new Random();
     
@@ -105,12 +108,14 @@ public class ExplosionManager {
      */
     private static boolean validateExplosionConfig() {
         boolean configValid = true;
+        boolean needsConfigReload = false;
         
         // Prevent division by zero in explosion phases
         if (GiantTNTConfig.explosionPhases <= 0) {
             GiantTNTConfig.explosionPhases = 1;
             logConfigWarning("explosionPhases was 0 or negative, clamped to 1");
             configValid = false;
+            needsConfigReload = true;
         }
         
         // Prevent massive explosion radius that could crash server
@@ -118,6 +123,7 @@ public class ExplosionManager {
             GiantTNTConfig.explosionRadius = 1000.0;
             logConfigWarning("explosionRadius exceeded 1000 blocks, clamped to 1000");
             configValid = false;
+            needsConfigReload = true;
         }
         
         // Prevent too many sub-explosions
@@ -125,6 +131,7 @@ public class ExplosionManager {
             GiantTNTConfig.subExplosionCount = 200;
             logConfigWarning("subExplosionCount exceeded 200, clamped to 200");
             configValid = false;
+            needsConfigReload = true;
         }
         
         // Prevent particle spam
@@ -132,6 +139,7 @@ public class ExplosionManager {
             GiantTNTConfig.particleCount = 5000;
             logConfigWarning("particleCount exceeded 5000, clamped to 5000");
             configValid = false;
+            needsConfigReload = true;
         }
         
         // Validate phases don't exceed sub-explosion count
@@ -141,11 +149,16 @@ public class ExplosionManager {
             configValid = false;
         }
         
+        // Warn about config file persistence
+        if (needsConfigReload) {
+            LOGGER.warn("Config values have been auto-corrected for safety. Please update config/gianttntmod-common.toml with the corrected values and restart or run /reload to make changes permanent.");
+        }
+        
         return configValid;
     }
     
     private static void logConfigWarning(String issue) {
-        System.err.println("[Giant TNT Mod] WARNING: Configuration issue detected - " + issue);
+        LOGGER.warn("Configuration issue detected and auto-corrected: {}", issue);
     }
     
     @SubscribeEvent
@@ -177,7 +190,9 @@ public class ExplosionManager {
     
     private static void executeExplosionPhase(PhasedExplosion explosion, ExplosionPhase phase) {
         float baseRadius = (float) (GiantTNTConfig.explosionRadius / 5.0F);
+        List<Explosion> explosions = new ArrayList<>();
         
+        // First pass: Create and explode all explosions to calculate affected blocks
         for (BlockPos pos : phase.explosionPositions) {
             Explosion.BlockInteraction interaction = GiantTNTConfig.breaksBlocks ? 
                 Explosion.BlockInteraction.BREAK : Explosion.BlockInteraction.NONE;
@@ -185,8 +200,13 @@ public class ExplosionManager {
             Explosion exp = new Explosion(explosion.level, explosion.source, null, null,
                 pos.getX(), pos.getY(), pos.getZ(), baseRadius, false, interaction);
                 
-            exp.explode();
-            exp.finalizeExplosion(true);
+            exp.explode(); // Calculate affected blocks and entities
+            explosions.add(exp);
+        }
+        
+        // Second pass: Finalize all explosions in one batch to reduce network overhead
+        for (Explosion exp : explosions) {
+            exp.finalizeExplosion(true); // Apply block destruction and send packets
         }
         
         // Play phase sound (quieter than initial)

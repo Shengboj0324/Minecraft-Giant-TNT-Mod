@@ -47,11 +47,11 @@ jar {
     manifest {
         attributes([
                 "Specification-Title"     : "Firearms Mod",
-                "Specification-Vendor"   : "YourName",
+                "Specification-Vendor"   : "Shengbo Jiang",
                 "Specification-Version"  : "1",
                 "Implementation-Title"   : project.name,
                 "Implementation-Version" : project.jar.archiveVersion,
-                "Implementation-Vendor"  : "YourName",
+                "Implementation-Vendor"  : "Shengbo Jiang",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
