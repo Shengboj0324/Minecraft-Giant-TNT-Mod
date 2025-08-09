@@ -7,15 +7,15 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath 'org.parchmentmc:librarian:1.+' // Optional, used to read mappings from a file
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '6.0.+', changing: true
+        // ParchmentMC removed for compatibility - using standard Forge mappings
     }
 }
 
 // Common configuration for all subprojects
 subprojects {
     apply plugin: 'net.minecraftforge.gradle'
-    apply plugin: 'org.parchmentmc.librarian.forgegradle'
+    // ParchmentMC plugin removed for compatibility
     apply plugin: 'eclipse'
     apply plugin: 'maven-publish'
 

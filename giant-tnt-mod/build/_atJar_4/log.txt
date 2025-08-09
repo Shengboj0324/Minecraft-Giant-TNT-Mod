@@ -1,0 +1,7 @@
+Java Launcher: /Users/jiangshengbo/.sdkman/candidates/java/17.0.10-tem/bin/java
+Arguments: '--inJar, /Users/jiangshengbo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.3.0/forge-1.19.2-43.3.0-injected.jar, --outJar, /Users/jiangshengbo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.3.0_mapped_official_1.19.2/forge-1.19.2-43.3.0_mapped_official_1.19.2.jar, --logFile, accesstransform.log, --atFile, /Users/jiangshengbo/Desktop/Minecraft-Giant-TNT-Mod/giant-tnt-mod/build/_atJar_4/parent_at.cfg'
+Classpath:
+ - /Users/jiangshengbo/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/accesstransformers/8.2.1/accesstransformers-8.2.1-fatjar.jar
+Working directory: /Users/jiangshengbo/Desktop/Minecraft-Giant-TNT-Mod/giant-tnt-mod/build/_atJar_4
+Main class: net.minecraftforge.accesstransformer.TransformerProcessor
+====================================
